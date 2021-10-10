@@ -35,12 +35,12 @@ body {
   @media only screen and (max-width: 50em) {
     .particles {
       max-height: 600rem;
-      padding-left: 5rem;
+      padding-left: 4rem;
       padding-right: 5rem; } }
   @media only screen and (max-width: 37.5em) {
     .particles {
       max-height: 1000rem;
-      padding-left: 5rem;
+      padding-left: 4rem;
       padding-right: 5rem; } }
   .particles__logo {
     width: 25rem;
@@ -49,7 +49,7 @@ body {
     cursor: pointer; }
     @media only screen and (max-width: 37.5em) {
       .particles__logo {
-        width: 20rem; } }
+        width: 18rem; } }
   .particles__moon {
     position: absolute;
     width: 40vw;
@@ -163,9 +163,9 @@ body {
         height: 4.5rem; } }
     @media only screen and (max-width: 37.5em) {
       .wrapper__dynamic-texts {
-        margin-top: -0.1rem;
+        margin-top: -0rem;
         margin-left: 1.2rem;
-        line-height: 26.1px;
+        line-height: 40px;
         height: 4rem; } }
   .wrapper__dynamic-texts li {
     color: #b9937e;
@@ -187,9 +187,9 @@ body {
         animation: slide 9.5s steps(5) infinite; } }
     @media only screen and (max-width: 37.5em) {
       .wrapper__dynamic-texts li {
-        top: 8.1rem;
         font-size: 2.6rem;
-        animation: slide 9.5s steps(5) infinite; } }
+        animation: slide 9.5s steps(5) infinite;
+        overflow: visible; } }
 
 @keyframes slide {
   100% {
@@ -209,6 +209,9 @@ body {
     @media only screen and (max-width: 50em) {
       .wrapper__dynamic-texts li span::after {
         top: 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .wrapper__dynamic-texts li span::after {
+        animation: typing 1.9s steps(14) infinite; } }
 
 @keyframes typing {
   100% {
