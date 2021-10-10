@@ -9,6 +9,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Jost", sans-serif;
@@ -26,9 +29,16 @@ body {
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
   z-index: 21000; }
+  @media only screen and (max-width: 50em) {
+    .particles {
+      max-height: 600rem;
+      padding-left: 5rem;
+      padding-right: 5rem; } }
   .particles__logo {
     width: 25rem;
-    position: absolute; }
+    position: absolute;
+    z-index: 200;
+    cursor: pointer; }
   .particles__moon {
     position: absolute;
     width: 40vw;
@@ -46,16 +56,50 @@ body {
   align-content: center;
   color: #8bdede;
   justify-items: flex-end;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  z-index: 100; }
+  .nav__sidebar-toggle {
+    display: none; }
   .nav__list {
     list-style: none;
     display: flex;
     align-self: center;
     justify-content: flex-end;
-    flex: 1; }
+    flex: 1;
+    cursor: pointer;
+    z-index: 200; }
     .nav__list :not(:last-child) {
       list-style: none;
       margin-right: 3rem; }
+  @media only screen and (max-width: 50em) {
+    .nav .nav {
+      font-family: "Jost", sans-serif;
+      display: flex;
+      font-size: 2.6rem;
+      justify-content: flex-end;
+      align-content: center;
+      justify-items: flex-end; }
+      .nav .nav__sidebar-toggle {
+        display: flex;
+        position: absolute;
+        top: 4rem;
+        left: 89%;
+        font-size: 4rem;
+        background: transparent;
+        border-color: transparent;
+        color: #8bdede;
+        z-index: 200;
+        cursor: pointer;
+        animation: bounce 2s ease-in-out infinite; }
+      .nav .nav__list {
+        visibility: hidden; }
+    @keyframes bounce {
+      0% {
+        transform: scale(1); }
+      50% {
+        transform: scale(1.5); }
+      100% {
+        transform: scale(1); } } }
 
 .wrapper {
   color: #aaa;
@@ -64,9 +108,15 @@ body {
   margin-top: 15rem;
   margin-left: 5rem;
   display: inline-flex; }
+  @media only screen and (max-width: 50em) {
+    .wrapper {
+      margin-top: 8rem; } }
   .wrapper__description {
     font-size: 7rem;
     font-family: "Jost", sans-serif; }
+    @media only screen and (max-width: 50em) {
+      .wrapper__description {
+        font-size: 5rem; } }
   .wrapper__text {
     font-size: 4rem; }
   .wrapper__dynamic-texts {
@@ -75,6 +125,11 @@ body {
     height: 6rem;
     line-height: 65px;
     overflow: hidden; }
+    @media only screen and (max-width: 50em) {
+      .wrapper__dynamic-texts {
+        margin-top: 1.9rem;
+        line-height: 50px;
+        height: 4.5rem; } }
   .wrapper__dynamic-texts li {
     color: #b9937e;
     font-size: 4rem;
@@ -83,6 +138,11 @@ body {
     position: relative;
     overflow: hidden;
     animation: slide 9.5s steps(5) infinite; }
+    @media only screen and (max-width: 50em) {
+      .wrapper__dynamic-texts li {
+        top: -1rem;
+        font-size: 4rem;
+        animation: slide 9.5s steps(5) infinite; } }
 
 @keyframes slide {
   100% {
@@ -99,6 +159,9 @@ body {
     background-blend-mode: screen;
     border-left: 2px solid #b9937e;
     animation: typing 1.9s steps(14) infinite; }
+    @media only screen and (max-width: 50em) {
+      .wrapper__dynamic-texts li span::after {
+        top: 0; } }
 
 @keyframes typing {
   100% {

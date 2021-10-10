@@ -1,10 +1,14 @@
 import React from 'react';
+import { FaBars } from 'react-icons/fa';
 import Logo from '../img/logo.png';
 // import Moon from '../img/moon.png';
 export default function NavBar() {
   return (
     <div>
       <nav className="nav">
+        <button className="nav__sidebar-toggle">
+          <FaBars />
+        </button>
         {/* <img src={Moon} className="particles__moon" alt="Moon" /> */}
         <img src={Logo} className="particles__logo" alt="logo" />
         <ul className="nav__list">

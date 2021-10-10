@@ -13,13 +13,21 @@
   padding-top: 3rem;
   position: relative;
   box-shadow: 5px 100px 18px $color-red;
+
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+  @media only screen and (max-width: $bp-medium) {
+    max-height: 600rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 
   z-index: 21000;
   &__logo {
     width: 25rem;
     position: absolute;
+    z-index: 200;
+    cursor: pointer;
   }
   &__moon {
     position: absolute;
@@ -41,16 +49,63 @@
   color: $color-logo;
   justify-items: flex-end;
   flex-wrap: wrap;
-
+  z-index: 100;
+  &__sidebar-toggle {
+    display: none;
+  }
   &__list {
     list-style: none;
     display: flex;
     align-self: center;
     justify-content: flex-end;
     flex: 1;
+    cursor: pointer;
+    z-index: 200;
     :not(:last-child) {
       list-style: none;
       margin-right: 3rem;
+    }
+  }
+  @media only screen and(max-width:$bp-medium) {
+    .nav {
+      font-family: $font-display;
+      display: flex;
+      font-size: 2.6rem;
+      justify-content: flex-end;
+      align-content: center;
+
+      justify-items: flex-end;
+
+      &__sidebar-toggle {
+        display: flex;
+
+        position: absolute;
+        top: 4rem;
+        left: 89%;
+
+        font-size: 4rem;
+        background: transparent;
+        border-color: transparent;
+        color: $color-logo;
+        z-index: 200;
+        cursor: pointer;
+        animation: bounce 2s ease-in-out infinite;
+      }
+      &__list {
+        visibility: hidden;
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
     }
   }
 }
@@ -62,10 +117,15 @@
   margin-top: 15rem;
   margin-left: 5rem;
   display: inline-flex;
-
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 8rem;
+  }
   &__description {
     font-size: 7rem;
     font-family: $font-display;
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 5rem;
+    }
   }
   &__text {
     font-size: 4rem;
@@ -76,6 +136,11 @@
     height: 6rem;
     line-height: 65px;
     overflow: hidden;
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 1.9rem;
+      line-height: 50px;
+      height: 4.5rem;
+    }
   }
   &__dynamic-texts li {
     color: $color-red;
@@ -85,6 +150,11 @@
     position: relative;
     overflow: hidden;
     animation: slide 9.5s steps(5) infinite;
+    @media only screen and (max-width: $bp-medium) {
+      top: -1rem;
+      font-size: 4rem;
+      animation: slide 9.5s steps(5) infinite;
+    }
   }
   @keyframes slide {
     100% {
@@ -105,6 +175,9 @@
     background-blend-mode: screen;
     border-left: 2px solid $color-red;
     animation: typing 1.9s steps(14) infinite;
+    @media only screen and (max-width: $bp-medium) {
+      top: 0;
+    }
   }
   @keyframes typing {
     100% {
