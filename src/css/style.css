@@ -12,6 +12,9 @@ html {
   @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
 
 body {
   font-family: "Jost", sans-serif;
@@ -20,7 +23,7 @@ body {
 .particles {
   background-image: linear-gradient(to bottom right, #000, #000, #8bdede);
   max-width: 500vw;
-  max-height: 300vh;
+  max-height: 300rem;
   padding-left: 10rem;
   padding-right: 10rem;
   padding-top: 3rem;
@@ -34,11 +37,19 @@ body {
       max-height: 600rem;
       padding-left: 5rem;
       padding-right: 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .particles {
+      max-height: 1000rem;
+      padding-left: 5rem;
+      padding-right: 5rem; } }
   .particles__logo {
     width: 25rem;
     position: absolute;
     z-index: 200;
     cursor: pointer; }
+    @media only screen and (max-width: 37.5em) {
+      .particles__logo {
+        width: 20rem; } }
   .particles__moon {
     position: absolute;
     width: 40vw;
@@ -75,7 +86,7 @@ body {
     .nav .nav {
       font-family: "Jost", sans-serif;
       display: flex;
-      font-size: 2.6rem;
+      font-size: 1.6rem;
       justify-content: flex-end;
       align-content: center;
       justify-items: flex-end; }
@@ -92,14 +103,15 @@ body {
         cursor: pointer;
         animation: bounce 2s ease-in-out infinite; }
       .nav .nav__list {
-        visibility: hidden; }
-    @keyframes bounce {
-      0% {
-        transform: scale(1); }
-      50% {
-        transform: scale(1.5); }
-      100% {
-        transform: scale(1); } } }
+        visibility: hidden; } }
+
+@keyframes bounce {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(1); } }
 
 .wrapper {
   color: #aaa;
@@ -108,28 +120,53 @@ body {
   margin-top: 15rem;
   margin-left: 5rem;
   display: inline-flex; }
+  @media only screen and (max-width: 62.5em) {
+    .wrapper {
+      margin-top: 10rem;
+      margin-left: 3rem; } }
   @media only screen and (max-width: 50em) {
     .wrapper {
       margin-top: 8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .wrapper {
+      margin-top: 6rem;
+      margin-left: 3rem; } }
   .wrapper__description {
     font-size: 7rem;
     font-family: "Jost", sans-serif; }
     @media only screen and (max-width: 50em) {
       .wrapper__description {
         font-size: 5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .wrapper__description {
+        font-size: 2.6rem; } }
   .wrapper__text {
     font-size: 4rem; }
+    @media only screen and (max-width: 37.5em) {
+      .wrapper__text {
+        font-size: 2.6rem; } }
   .wrapper__dynamic-texts {
     margin-top: 2.9rem;
     margin-left: 3rem;
     height: 6rem;
     line-height: 65px;
     overflow: hidden; }
+    @media only screen and (max-width: 75em) {
+      .wrapper__dynamic-texts {
+        margin-top: 3.9rem;
+        line-height: 50px;
+        height: 4.5rem; } }
     @media only screen and (max-width: 50em) {
       .wrapper__dynamic-texts {
         margin-top: 1.9rem;
         line-height: 50px;
         height: 4.5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .wrapper__dynamic-texts {
+        margin-top: -0.1rem;
+        margin-left: 1.2rem;
+        line-height: 26.1px;
+        height: 4rem; } }
   .wrapper__dynamic-texts li {
     color: #b9937e;
     font-size: 4rem;
@@ -138,10 +175,20 @@ body {
     position: relative;
     overflow: hidden;
     animation: slide 9.5s steps(5) infinite; }
+    @media only screen and (max-width: 75em) {
+      .wrapper__dynamic-texts li {
+        top: -1rem;
+        font-size: 4rem;
+        animation: slide 9.5s steps(5) infinite; } }
     @media only screen and (max-width: 50em) {
       .wrapper__dynamic-texts li {
         top: -1rem;
         font-size: 4rem;
+        animation: slide 9.5s steps(5) infinite; } }
+    @media only screen and (max-width: 37.5em) {
+      .wrapper__dynamic-texts li {
+        top: 8.1rem;
+        font-size: 2.6rem;
         animation: slide 9.5s steps(5) infinite; } }
 
 @keyframes slide {
