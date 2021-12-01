@@ -16,6 +16,7 @@ $font-primary: 'Architects Daughter', cursive;
 //Fonts
 $font-display: 'Jost', sans-serif;
 $font-normal: 'Open Sans', sans-serif;
+$bp-exLarget: 100em;
 $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px;
@@ -42,5 +43,6 @@ html {
 body {
   font-family: $font-display;
 
-  background-color: $color-logo;
+  background-image: linear-gradient(to bottom left, $color-black, $color-logo);
+  z-index: -1;
 }
