@@ -13,7 +13,9 @@ export default function NavBar() {
         <img src={Logo} className="particles__logo" alt="logo" />
         <ul className="nav__list">
           <li>Home</li>
-          <li>Portfolio</li>
+          <li>
+            <a href="#container">Portfolio</a>
+          </li>
           <li>About</li>
           <li>Contact</li>
         </ul>
