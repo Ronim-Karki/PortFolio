@@ -23,17 +23,27 @@ export default function Protfolio() {
         </div> */}
 
           {portfolioData.map((item, index) => {
-            const { ProjectName, Languages, link, gitLink, img } = item;
+            const { link, gitLink, img } = item;
 
             return (
               <div className="container__images container__images--img-1">
                 <img className="image1" src={img} alt="Images" />
 
-                <a className="image1__btn" href={link} target="_blank">
+                <a
+                  className="image1__btn"
+                  href={link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Visit Site
                 </a>
 
-                <a className="image1__btn1" href={gitLink} target="_blank">
+                <a
+                  className="image1__btn1"
+                  href={gitLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon
                     icon="fa-brands fa-github"
                     style={{ color: 'white' }}
