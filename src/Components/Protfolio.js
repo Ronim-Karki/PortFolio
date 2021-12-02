@@ -1,6 +1,6 @@
 import React from 'react';
 import portfolioData from '../Objects/portfolioData.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { AiFillGithub } from 'react-icons/ai';
 import About from './About.js';
 export default function Protfolio() {
   return (
@@ -44,9 +44,9 @@ export default function Protfolio() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FontAwesomeIcon
+                  <AiFillGithub
                     icon="fa-brands fa-github"
-                    style={{ color: 'white' }}
+                    style={{ color: 'white', marginTop: '0.35rem' }}
                   />
                   github Repo
                 </a>
