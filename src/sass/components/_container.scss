@@ -1,6 +1,6 @@
 .container {
   background-color: rgba(#353d41, 0.08);
-
+  font-family: $font-display;
   // height: 200vh;
   color: $color-grey-light-1;
   text-transform: uppercase;
@@ -47,18 +47,18 @@
     align-content: space-around;
     flex-direction: row;
 
-    color: $color-grey-light-1;
-    font-size: 50px;
+    color: $color-logo;
+    font-size: 5rem;
     @media only screen and (max-width: $bp-largest) {
       font-size: 50px;
     }
     @media only screen and (max-width: $bp-medium) {
       margin-top: 2em;
-      font-size: 35px;
+      font-size: 2.6rem;
     }
     @media only screen and (max-width: $bp-small) {
       margin-top: 2em;
-      font-size: 20px;
+      font-size: 2.6rem;
     }
   }
   &__images {
@@ -87,6 +87,7 @@
         max-width: 50rem;
         display: flex;
         flex-direction: row;
+        flex: 1;
         margin-left: 5rem;
         align-content: space-between;
         // flex-wrap: wrap;
@@ -120,7 +121,8 @@
 
           align-self: flex-end;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
+          gap: 1rem;
           padding: 1rem;
           background-color: transparent;
           border-color: white;
