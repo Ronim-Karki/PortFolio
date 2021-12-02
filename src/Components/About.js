@@ -2,7 +2,7 @@ import React from 'react';
 import Ronim from '../img/ronimpic.jpg';
 export default function About() {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="about__heading">About</div>
       <img className="about__profile" src={Ronim} alt="profileimage" />
       <p>

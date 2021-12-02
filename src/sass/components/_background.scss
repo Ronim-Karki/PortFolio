@@ -73,6 +73,13 @@
       list-style: none;
       margin-right: 3rem;
     }
+    li a {
+      text-decoration: none;
+      color: $color-logo;
+    }
+    li a:active {
+      color: $color-bright-grey;
+    }
   }
 
   @media only screen and(max-width:$bp-medium) {

@@ -1,7 +1,7 @@
 .container {
-  background-color: #353d41;
+  background-color: rgba(#353d41, 0.08);
 
-  max-height: 200vh;
+  // height: 200vh;
   color: $color-grey-light-1;
   text-transform: uppercase;
   margin-top: -18rem;
@@ -9,10 +9,10 @@
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-items: center;
+
   justify-content: flex-start;
   align-items: flex-start;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 
   box-shadow: 0 20rem 4rem rgba($color-black, 1);
   clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
@@ -20,22 +20,23 @@
   //   margin-top: 10rem;
   //   margin-left: 3rem;
   // }
-  @media only screen and (max-width: 1300px) {
-    max-height: 360vh;
-  }
+  // @media only screen and (max-width: 1300px) {
+  //   // height: 360vh;
+  // }
 
   @media only screen and (max-width: $bp-largest) {
-    height: 200vh;
+    font-size: 70%;
   }
   @media only screen and (max-width: $bp-large) {
-    height: 310vh;
+    // height: 310vh;
+    font-size: 20%;
   }
   @media only screen and (max-width: $bp-medium) {
-    height: 310vh;
+    // height: 310vh;
   }
   @media only screen and (max-width: $bp-small) {
     font-size: 10%;
-    height: 240vh;
+    // height: 240vh;
   }
 
   &__heading {
@@ -67,9 +68,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    justify-items: center;
 
-    flex: 0 0 40%;
-    gap: 1rem 1rem;
+    flex: 0 0 2;
+    gap: 5rem 5rem;
 
     align-items: flex-start;
     &--img-1 {
@@ -78,24 +80,23 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-content: space-between;
-      margin-left: 5rem;
+
       transition: all 0.5s;
 
       .image1 {
         max-width: 50rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         margin-left: 5rem;
         align-content: space-between;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         transition: all 0.5s;
         position: relative;
 
         &__btn {
           font-size: 2rem;
           position: absolute;
-          bottom: 25%;
+
           align-self: center;
           margin-bottom: 4rem;
           display: flex;
@@ -105,7 +106,8 @@
           border-color: white;
           color: white;
           visibility: hidden;
-          transition: 0.5s;
+          transition: all 0.5s;
+          opacity: 0;
           margin-left: 4rem;
           text-decoration: none;
         }
@@ -115,7 +117,7 @@
           margin-top: 1rem;
           border: solid;
           text-decoration: none;
-          bottom: 50%;
+
           align-self: flex-end;
           display: flex;
           flex-direction: column;
@@ -124,7 +126,8 @@
           border-color: white;
           color: white;
           visibility: hidden;
-          transition: 1s;
+          opacity: 0;
+          transition: all 1s;
           margin-left: 4rem;
         }
       }
@@ -133,12 +136,12 @@
         filter: blur(3px) brightness(80%);
         &__btn {
           visibility: visible;
-          bottom: unset;
+          opacity: 1;
           transform: translatey(-5rem);
         }
         &__btn1 {
           visibility: visible;
-          bottom: unset;
+          opacity: 1;
           transform: translatey(-10rem);
         }
       }

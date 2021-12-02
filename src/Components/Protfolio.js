@@ -5,7 +5,7 @@ import About from './About.js';
 export default function Protfolio() {
   return (
     <>
-      <div className="container">
+      <div className="container" id="container">
         <h2 className="container__heading">Portfolio</h2>
         <div className="container__images">
           {/* <div className="container__images container__images--img-1">
