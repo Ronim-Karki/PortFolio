@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
+
 import Logo from '../img/logo.png';
 // import Moon from '../img/moon.png';
 export default function NavBar() {
@@ -16,8 +17,12 @@ export default function NavBar() {
           <li>
             <a href="#container">Portfolio</a>
           </li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#about">Contact</a>
+          </li>
         </ul>
       </nav>
       <div className="wrapper">

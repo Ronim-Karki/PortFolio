@@ -83,6 +83,11 @@ body {
     .nav__list :not(:last-child) {
       list-style: none;
       margin-right: 3rem; }
+    .nav__list li a {
+      text-decoration: none;
+      color: #8bdede; }
+    .nav__list li a:active {
+      color: #eeeeee; }
   @media only screen and (max-width: 50em) {
     .nav .nav {
       font-family: "Jost", sans-serif;
@@ -220,8 +225,7 @@ body {
     margin: 0 -35px 0 35px; } }
 
 .container {
-  background-color: #353d41;
-  max-height: 200vh;
+  background-color: rgba(53, 61, 65, 0.08);
   color: #f9f7f6;
   text-transform: uppercase;
   margin-top: -18rem;
@@ -229,28 +233,19 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-items: center;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-wrap: wrap;
   box-shadow: 0 20rem 4rem black;
   clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%); }
-  @media only screen and (max-width: 1300px) {
-    .container {
-      max-height: 360vh; } }
   @media only screen and (max-width: 75em) {
     .container {
-      height: 200vh; } }
+      font-size: 70%; } }
   @media only screen and (max-width: 62.5em) {
     .container {
-      height: 310vh; } }
-  @media only screen and (max-width: 50em) {
-    .container {
-      height: 310vh; } }
+      font-size: 20%; } }
   @media only screen and (max-width: 37.5em) {
     .container {
-      font-size: 10%;
-      height: 240vh; } }
+      font-size: 10%; } }
   .container__heading {
     margin: 0 auto;
     margin-top: 5rem;
@@ -278,8 +273,9 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    flex: 0 0 40%;
-    gap: 1rem 1rem;
+    justify-items: center;
+    flex: 0 0 2;
+    gap: 5rem 5rem;
     align-items: flex-start; }
     .container__images--img-1 {
       width: 50rem;
@@ -287,22 +283,18 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-content: space-between;
-      margin-left: 5rem;
       transition: all 0.5s; }
       .container__images--img-1 .image1 {
         max-width: 50rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         margin-left: 5rem;
         align-content: space-between;
-        flex-wrap: wrap;
         transition: all 0.5s;
         position: relative; }
         .container__images--img-1 .image1__btn {
           font-size: 2rem;
           position: absolute;
-          bottom: 25%;
           align-self: center;
           margin-bottom: 4rem;
           display: flex;
@@ -312,7 +304,8 @@ body {
           border-color: white;
           color: white;
           visibility: hidden;
-          transition: 0.5s;
+          transition: all 0.5s;
+          opacity: 0;
           margin-left: 4rem;
           text-decoration: none; }
         .container__images--img-1 .image1__btn1 {
@@ -321,7 +314,6 @@ body {
           margin-top: 1rem;
           border: solid;
           text-decoration: none;
-          bottom: 50%;
           align-self: flex-end;
           display: flex;
           flex-direction: column;
@@ -330,18 +322,19 @@ body {
           border-color: white;
           color: white;
           visibility: hidden;
-          transition: 1s;
+          opacity: 0;
+          transition: all 1s;
           margin-left: 4rem; }
       .container__images--img-1:hover .image1 {
         transform: scale(0.9);
         filter: blur(3px) brightness(80%); }
         .container__images--img-1:hover .image1__btn {
           visibility: visible;
-          bottom: unset;
+          opacity: 1;
           transform: translatey(-5rem); }
         .container__images--img-1:hover .image1__btn1 {
           visibility: visible;
-          bottom: unset;
+          opacity: 1;
           transform: translatey(-10rem); }
 
 .footer {
