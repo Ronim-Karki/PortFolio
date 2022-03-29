@@ -133,6 +133,7 @@
   position: absolute;
   margin-top: 15rem;
   margin-left: 5rem;
+  width: 38rem;
   display: inline-flex;
   @media only screen and (max-width: $bp-large) {
     margin-top: 10rem;
@@ -163,11 +164,11 @@
     }
   }
   &__dynamic-texts {
-    margin-top: 2.9rem;
-    margin-left: 3rem;
+    color: $color-red;
+    font-size: 4rem;
+
     height: 6rem;
-    line-height: 65px;
-    overflow: hidden;
+
     @media only screen and (max-width: $bp-largest) {
       margin-top: 3.9rem;
       line-height: 50px;
@@ -186,61 +187,61 @@
       // overflow: visible;
     }
   }
-  &__dynamic-texts li {
-    color: $color-red;
-    font-size: 4rem;
-    list-style: none;
-    top: 0;
-    position: relative;
-    overflow: hidden;
+  // &__dynamic-texts li {
+  //   color: $color-red;
+  //   font-size: 4rem;
+  //   list-style: none;
+  //   top: 0;
+  //   position: relative;
+  //   overflow: hidden;
 
-    animation: slide 9.5s steps(5) infinite;
-    @media only screen and (max-width: $bp-largest) {
-      top: -1rem;
-      font-size: 4rem;
-      animation: slide 9.5s steps(5) infinite;
-    }
-    @media only screen and (max-width: $bp-medium) {
-      top: -1rem;
-      font-size: 4rem;
-      animation: slide 9.5s steps(5) infinite;
-    }
-    @media only screen and (max-width: $bp-small) {
-      font-size: 2.6rem;
-      animation: slide 9.5s steps(5) infinite;
-      overflow: visible;
-    }
-  }
-  @keyframes slide {
-    100% {
-      top: -32.2rem;
-    }
-  }
-  &__dynamic-texts li span {
-    position: relative;
-  }
-  &__dynamic-texts li span::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    height: 150%;
-    width: 100%;
-    background-image: linear-gradient($color-black, $color-black);
+  //   animation: slide 9.5s steps(5) infinite;
+  //   @media only screen and (max-width: $bp-largest) {
+  //     top: -1rem;
+  //     font-size: 4rem;
+  //     animation: slide 9.5s steps(5) infinite;
+  //   }
+  //   @media only screen and (max-width: $bp-medium) {
+  //     top: -1rem;
+  //     font-size: 4rem;
+  //     animation: slide 9.5s steps(5) infinite;
+  //   }
+  //   @media only screen and (max-width: $bp-small) {
+  //     font-size: 2.6rem;
+  //     animation: slide 9.5s steps(5) infinite;
+  //     overflow: visible;
+  //   }
+  // }
+  // @keyframes slide {
+  //   100% {
+  //     top: -32.2rem;
+  //   }
+  // }
+  // &__dynamic-texts li span {
+  //   position: relative;
+  // }
+  // &__dynamic-texts li span::after {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   height: 150%;
+  //   width: 100%;
+  //   background-image: linear-gradient($color-black, $color-black);
 
-    background-blend-mode: screen;
-    border-left: 2px solid $color-red;
-    animation: typing 1.9s steps(14) infinite;
-    @media only screen and (max-width: $bp-medium) {
-      top: 0;
-    }
-    @media only screen and (max-width: $bp-small) {
-      animation: typing 1.9s steps(14) infinite;
-    }
-  }
-  @keyframes typing {
-    100% {
-      left: 100%;
-      margin: 0 -35px 0 35px;
-    }
-  }
+  //   background-blend-mode: screen;
+  //   border-left: 2px solid $color-red;
+  //   animation: typing 1.9s steps(14) infinite;
+  //   @media only screen and (max-width: $bp-medium) {
+  //     top: 0;
+  //   }
+  //   @media only screen and (max-width: $bp-small) {
+  //     animation: typing 1.9s steps(14) infinite;
+  //   }
+  // }
+  // @keyframes typing {
+  //   100% {
+  //     left: 100%;
+  //     margin: 0 -35px 0 35px;
+  //   }
+  // }
 }
