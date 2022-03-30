@@ -7,7 +7,8 @@ import HackerNews from '../img/Projects/HackerNews.JPG';
 import PortfolioWP from '../img/Projects/PortfolioWP.JPG';
 import Adoption from '../img/Projects/Adoption.JPG';
 import Library from '../img/Projects/Library.JPG';
-
+import Weather from '../img/Projects/WeatherApp.JPG';
+import Rentmate from '../img/Projects/Rentmate.png';
 const portfolioData = [
   {
     ProjectName: 'Natours',
@@ -71,6 +72,20 @@ const portfolioData = [
     link: '#',
     gitLink: 'https://github.com/Ronim123/Makeitlouder.git',
     img: Library,
+  },
+  {
+    ProjectName: 'Weather Forecast',
+    Languages: 'HTMl, Css, JavaScript, React',
+    link: 'https://weatherforecastdemo.netlify.app/',
+    gitLink: 'https://github.com/Ronim123/WeatherApp.git',
+    img: Weather,
+  },
+  {
+    ProjectName: 'Rent Mate',
+    Languages: 'HTMl, Css, JavaScript, react native, firebase',
+    link: '#',
+    gitLink: 'https://github.com/Ronim123/rental1.0.git',
+    img: Rentmate,
   },
 ];
 
