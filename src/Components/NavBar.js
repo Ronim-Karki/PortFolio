@@ -27,25 +27,14 @@ export default function NavBar() {
       </nav>
       <div className="wrapper">
         <h1 className="wrapper__description">
-          Hi, <span className="wrapper__text">I'm </span>
+          Hi,
+          <span className="wrapper__text">
+            I'm &nbsp;
+            <span className="wrapper__dynamic-texts">
+              Ronim karki, a web developer and motivated person.
+            </span>
+          </span>
         </h1>
-        <ul class="wrapper__dynamic-texts">
-          <li>
-            <span> Ronim karki.</span>
-          </li>
-          <li>
-            <span> a web designer.</span>
-          </li>
-          <li>
-            <span> a Developer.</span>
-          </li>
-          <li>
-            <span> a freelancer.</span>
-          </li>
-          <li>
-            <span> a motivated person.</span>
-          </li>
-        </ul>
       </div>
     </div>
   );
